@@ -1,0 +1,34 @@
+{
+  "id": "rare-cancer-registry-templates-gov-001",
+  "title": "Standards-not-a-data-store + synthetic-data-only constitution",
+  "project": "rare-cancer-registry-templates",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer-research", "open-standards", "health-data", "governance", "interoperability"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "An open, consent-first rare-cancer registry STANDARDS kit (CDEs, crosswalks, consent/governance templates) must, before any content, establish a binding constitution that it ships standards and never collects, stores, hosts, processes, or redistributes patient data of any kind. Binding Elyos cancer guardrails: open-access/aggregate/de-identified data only (here, fully SYNTHETIC fixtures + published-aggregate context only); consent-first registries (deceased/aggregate for any demonstration); no medical advice (patient-facing content is education-only with a 'not medical advice' notice and oncologist+advocate review); per-source licence verification; provenance on every assertion. Restricted terminologies (SNOMED CT, ICD-O-3, LOINC, ICCR) may only be referenced as code-only crosswalk stubs. No partner, steward, or expert reviewers are secured yet. See PLAN.md.",
+  "objective": "Author the project constitution that (1) declares the standards-not-a-data-store boundary and the responsibility boundary (adopters own IRB/REC, consent, and custody; Elyos holds nothing), (2) mandates fully synthetic fixtures plus published-aggregate context only and defines the per-fixture synthetic-data attestation format, and (3) requires the no-data + not-medical-advice notices atop every published template and the docs site.",
+  "acceptanceCriteria": [
+    "Constitution states the project ships standards and never collects, stores, hosts, processes, or redistributes patient data (identifiable, de-identified, or row-level aggregate).",
+    "Mandates fully synthetic fixtures + published-aggregate context only; defines the synthetic-data attestation format used by the CI 'no real data' scan.",
+    "Defines the responsibility boundary: adopters own ethics approval, consent, and data custody; Elyos holds nothing.",
+    "Requires the standards-not-a-data-store and 'not medical advice' notices atop every template and the docs site.",
+    "References the binding cancer guardrails and the open-lead / restricted-stub licensing rule.",
+    "Published as a human-readable governance document committed via PR, with provenance to the Elyos cancer guardrails and good-deed definition."
+  ],
+  "resources": [
+    "planning/projects/rare-cancer-registry-templates/PLAN.md",
+    "CLAUDE.md",
+    "docs/good-deed-definition.md",
+    "planning/ROADMAP.md"
+  ],
+  "output": "A governance constitution document (governance/standards-not-a-data-store.md) plus the synthetic-data attestation template, committed via PR, establishing the no-data boundary, synthetic-only policy, responsibility boundary, and required notices.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}
