@@ -1,0 +1,34 @@
+{
+  "id": "rare-cancer-registry-templates-compliance-001",
+  "title": "Informational GDPR/HIPAA/Common-Rule mapping (primary-source-cited)",
+  "project": "rare-cancer-registry-templates",
+  "type": "research",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer-research", "regulatory", "health-data", "governance", "consent"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "Adopters of the registry standards need to understand how the CDE and consent design maps to major regulatory frameworks: GDPR (Arts. 9, 89, Recital 27), HIPAA (Privacy Rule, Safe Harbor and Expert Determination de-identification standards §164.514(b), and the 50-year decedent rule §164.502(f)), and the revised Common Rule (45 CFR 46, including §46.116(d) broad consent). This mapping is HIGH risk-tier: every claim must be primary-source-cited, clearly labelled 'informational — not legal advice', and signed off by a bioethics/IRB or health-data-privacy reviewer before publication. The mapping must carry `lastVerified` and `validUntil` dates; stale HIGH-tier claims are withheld until re-verified. Depends on rare-cancer-registry-templates-consent-001. M2 entry gate (bioethics/legal reviewer secured) must be satisfied.",
+  "objective": "Research and author an informational regulatory mapping (`compliance/regulatory-mapping.md`) covering how the project's CDE design and consent templates align with: (1) GDPR Art. 9 (special-category health data), Art. 89 (research safeguards), Recital 27 (deceased persons), and relevant member-state post-mortem laws; (2) HIPAA Privacy Rule §164.514(b) Safe Harbor and Expert Determination de-identification standards, and §164.502(f) 50-year decedent rule; and (3) revised Common Rule 45 CFR 46, including §46.116(d) broad consent. Every claim must cite the primary source by section; every page must carry 'Informational — not legal advice' labels; `lastVerified` and `validUntil` must be set per claim.",
+  "acceptanceCriteria": [
+    "Every GDPR claim (Art. 9 special-category basis, Art. 89 research safeguards, Recital 27 deceased) is primary-source-cited with the exact article/recital and a retrieval date.",
+    "HIPAA claims cover §164.514(b) Safe Harbor and Expert Determination with primary-source citations; §164.502(f) 50-year decedent rule is cited and explained.",
+    "Common Rule claims cover 45 CFR 46 §46.116(d) broad consent with primary-source citation.",
+    "Every page carries 'Informational — not legal advice; consult your IRB/REC, DPO, and counsel.'",
+    "Every claim carries `lastVerified` and `validUntil` dates; claims past `validUntil` are auto-flagged and withheld per the prov-001 staleness model.",
+    "Bioethics/legal reviewer sign-off recorded, version-scoped, before publication."
+  ],
+  "resources": [
+    "PLAN.md",
+    "tasks/rare-cancer-registry-templates-consent-001.json",
+    "tasks/rare-cancer-registry-templates-prov-001.json",
+    "tasks/rare-cancer-registry-templates-partner-001.json"
+  ],
+  "output": "A `compliance/regulatory-mapping.md` document with primary-source-cited GDPR/HIPAA/Common-Rule informational mapping, `lastVerified`/`validUntil` per claim, and 'not legal advice' notices, committed via PR only after bioethics/legal reviewer sign-off.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

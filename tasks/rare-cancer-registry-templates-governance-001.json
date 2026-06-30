@@ -1,0 +1,33 @@
+{
+  "id": "rare-cancer-registry-templates-governance-001",
+  "title": "Governance-charter + data-sharing-agreement + FAIR/CARE checklist templates",
+  "project": "rare-cancer-registry-templates",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "governance", "health-data", "open-standards", "consent"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Adopters of the CDE and consent standards also need governance-layer templates: a governance-charter template for registry oversight, a data-sharing-agreement (DSA) template for inter-registry collaboration, and a FAIR + CARE alignment checklist. These are not patient-facing (medium risk tier), but they depend on the consent model being established first. The governance-conformance checklist validator (govcheck-001) will consume the structure defined here. Depends on rare-cancer-registry-templates-consent-001. Bioethics and maintainer review.",
+  "objective": "Author the governance toolkit templates (`governance/`) covering: (1) a governance-charter template defining registry oversight, roles, data-use scope, and conflict-of-interest procedures; (2) a data-sharing-agreement (DSA) template with consent-status confirmation, data-use specification (DUO codes), liability, publication rights, and revocation propagation clauses; and (3) a FAIR + CARE alignment checklist that adopters complete before launch, documenting how their registry addresses each FAIR principle and, where applicable, CARE Principles for Indigenous Data Governance.",
+  "acceptanceCriteria": [
+    "Governance-charter template covers: registry purpose, governance roles and responsibilities, data-use scope, conflict-of-interest procedure, and amendment process.",
+    "Data-sharing-agreement template covers: parties, data description (no patient data flows to this project), consent-status confirmation clause, DUO data-use specification, liability, publication rights, and revocation/downstream-propagation obligation.",
+    "FAIR + CARE checklist enumerates each FAIR principle (Findable, Accessible, Interoperable, Reusable) and CARE principle (Collective Benefit, Authority to Control, Responsibility, Ethics) with guidance and a completion field for adopters.",
+    "Every template includes the responsibility-boundary notice: adopters own IRB/REC approval, consent, and data custody; Elyos holds nothing.",
+    "Templates carry provenance to their source principles (FAIR: Wilkinson et al.; CARE: Global Indigenous Data Alliance); no copyrighted text is reproduced.",
+    "Bioethics and maintainer sign-off recorded."
+  ],
+  "resources": [
+    "PLAN.md",
+    "tasks/rare-cancer-registry-templates-consent-001.json",
+    "tasks/rare-cancer-registry-templates-prov-001.json"
+  ],
+  "output": "A `governance/` directory with governance-charter, DSA, and FAIR/CARE checklist templates, committed via PR with bioethics and maintainer sign-off.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

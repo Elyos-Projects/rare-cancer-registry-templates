@@ -1,0 +1,35 @@
+{
+  "id": "rare-cancer-registry-templates-vocab-001",
+  "title": "Open-vocabulary bindings + restricted-terminology crosswalk stubs",
+  "project": "rare-cancer-registry-templates",
+  "type": "data",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer-research", "open-standards", "health-data", "interoperability", "ontology"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The CDE set (cde-001) requires formal vocabulary binding files that specify which code systems serve each field. Open vocabularies (Mondo, ORDO, HPO, OncoTree, NCIt) must be the primary bindings; restricted terminologies (SNOMED CT, ICD-O-3, LOINC) may only appear as code-only crosswalk stubs for adopters who hold the relevant licences. The CI licence deny-list linter (ci-001) must remain green. Depends on rare-cancer-registry-templates-cde-001. Standards and licence reviewer sign-off required.",
+  "objective": "Produce the open-vocabulary binding layer (`vocab/`) providing: (1) explicit value-set definitions binding CDE fields to open code systems (Mondo/ORDO for disease, HPO for phenotype, OncoTree/NCIt for oncology tumour types), with all required `sources/allowlist.yml` entries in approved status; and (2) crosswalk stub tables for restricted systems (SNOMED CT, ICD-O-3, LOINC) containing only target code identifiers — no proprietary descriptions or hierarchy — so adopters who hold licences can complete the mapping.",
+  "acceptanceCriteria": [
+    "Disease and phenotype bindings use Mondo (CC-BY-4.0) and Orphanet/ORDO (CC-BY-4.0) as primary disease vocabulary; HPO for phenotype.",
+    "Oncology tumour-type bindings use OncoTree (open/MSK) and NCIt (public/NCI) as primary systems.",
+    "Bindings to SNOMED CT, ICD-O-3, and LOINC are crosswalk stubs only: target codes referenced by identifier, with no proprietary descriptions, definitions, or hierarchy embedded.",
+    "Every vocabulary file carries provenance (source name, version, retrieval date, licence, allowlist entry reference) per the prov-001 model.",
+    "CI licence deny-list linter passes (no embedded restricted terminology); `pnpm build && pnpm test && pnpm lint` green.",
+    "All open vocabulary sources referenced have status: approved in `sources/allowlist.yml`; standards and licence reviewer sign-off recorded."
+  ],
+  "resources": [
+    "PLAN.md",
+    "tasks/rare-cancer-registry-templates-cde-001.json",
+    "tasks/rare-cancer-registry-templates-license-002.json",
+    "tasks/rare-cancer-registry-templates-ci-001.json",
+    "sources/allowlist.yml"
+  ],
+  "output": "A `vocab/` directory containing open-vocabulary binding files and restricted-terminology crosswalk stub tables, with provenance metadata, committed via PR with standards and licence reviewer sign-off.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

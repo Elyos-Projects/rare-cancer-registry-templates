@@ -1,0 +1,34 @@
+{
+  "id": "rare-cancer-registry-templates-fixtures-001",
+  "title": "Synthetic conformance fixtures + round-trip test",
+  "project": "rare-cancer-registry-templates",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "open-standards", "health-data", "interoperability", "ci-cd"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The validator (validate-001) and the FHIR IG (ig-001) both require a set of synthetic conformance fixtures — representative rare-cancer records that are provably synthetic and carry the required synthetic-data attestation, usable as both test inputs and examples. These fixtures must exercise the core CDE set, the crosswalk round-trips, and governance fields. Every fixture must pass the CI 'no real data' scan and the provenance linter. Depends on rare-cancer-registry-templates-crosswalk-001.",
+  "objective": "Generate a suite of synthetic conformance fixtures in `fixtures/` that: (1) represent realistic but entirely generated rare-cancer CDE records, (2) each carry a valid synthetic-data attestation per the gov-001 format, (3) are used as inputs for the crosswalk round-trip tests (CDE → mCODE FHIR, OMOP, Phenopackets → validate back), and (4) cover the minimal core plus at least one optional module and the consent-metadata module.",
+  "acceptanceCriteria": [
+    "All fixtures are provably synthetic: generated (not sampled from real records), each carrying a valid synthetic-data attestation in the format defined by gov-001.",
+    "CI 'no real data' scan passes on every fixture; provenance linter passes.",
+    "At least one fixture exercises: the minimal-core CDE fields, the consent-metadata module, and one optional module (e.g., diagnosis/histology).",
+    "Fixtures are used as inputs for automated crosswalk round-trip tests (CDE → mCODE FHIR → validate; CDE → OMOP CDM → validate; CDE → Phenopackets → validate); tests pass.",
+    "`pnpm build && pnpm test && pnpm lint` green.",
+    "Fixtures are committed to `fixtures/` with a CREDITS note confirming fully synthetic origin."
+  ],
+  "resources": [
+    "PLAN.md",
+    "tasks/rare-cancer-registry-templates-crosswalk-001.json",
+    "tasks/rare-cancer-registry-templates-gov-001.json",
+    "tasks/rare-cancer-registry-templates-ci-001.json"
+  ],
+  "output": "A `fixtures/` directory of synthetic conformance records with attestations and automated round-trip tests, committed via PR with green CI.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

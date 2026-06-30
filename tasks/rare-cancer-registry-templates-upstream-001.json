@@ -1,0 +1,33 @@
+{
+  "id": "rare-cancer-registry-templates-upstream-001",
+  "title": "Upstream-contribution path (OHDSI/GA4GH/ERN) + maintenance rotation",
+  "project": "rare-cancer-registry-templates",
+  "type": "maintenance",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer-research", "open-standards", "health-data", "governance", "community"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "The long-term preferred home for the rare-cancer CDE specialisation is upstream — contributed into an existing standards community (an OHDSI oncology workgroup, a GA4GH driver project, or a rare-disease registry network such as an ERN-affiliated group) so the standard outlives the project and doesn't depend on a single repository. This task formalises the upstream contribution path and ensures maintenance and reviewer rotation are operating. Depends on rare-cancer-registry-templates-sustain-001.",
+  "objective": "Open and document the upstream contribution conversation with at least one standards body (OHDSI, GA4GH, or ERN-affiliated rare-disease network) and confirm that the maintenance and reviewer rotation plan from sustain-001 is operational: reviewer roles are filled or actively being recruited, staleness cadence is running, and the version policy is in effect.",
+  "acceptanceCriteria": [
+    "Upstream contribution conversation opened with at least one standards body (OHDSI oncology workgroup, GA4GH driver project, or ERN/EURACAN-affiliated network); contact and response documented.",
+    "A contribution package (summary of the rare-cancer CDE set, crosswalks, and consent templates with provenance) is prepared for the target community.",
+    "Maintenance rotation confirmed operational: reviewer roles documented, recruitment status logged for any vacant seats.",
+    "Staleness cadence confirmed running: at least one source has been re-verified or auto-flagged since the last review window.",
+    "Version policy confirmed in effect: semantic versioning applied to at least one post-adoption update.",
+    "All status recorded in `governance/upstream-contribution-status.md`; maintainer sign-off."
+  ],
+  "resources": [
+    "PLAN.md",
+    "tasks/rare-cancer-registry-templates-sustain-001.json",
+    "tasks/rare-cancer-registry-templates-adopt-001.json"
+  ],
+  "output": "A `governance/upstream-contribution-status.md` recording the upstream conversation, contribution package, and maintenance-rotation confirmation, committed via PR with maintainer sign-off.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

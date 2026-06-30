@@ -1,0 +1,33 @@
+{
+  "id": "rare-cancer-registry-templates-license-002",
+  "title": "Analyse & record ≥5 candidate standards; approve the open core",
+  "project": "rare-cancer-registry-templates",
+  "type": "research",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer-research", "open-standards", "health-data", "governance", "licensing"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Before any vocabulary binding or crosswalk work can proceed, the licence reviewer must analyse and approve candidate terminology and data standards. The open-lead rule (Mondo/ORDO/HPO/OncoTree/NCIt/mCODE/OMOP/Phenopackets/DUO) and the restricted-stub rule (SNOMED CT/ICD-O-3/LOINC/ICCR) defined in license-001 must be populated with concrete licence determinations for at least 5 candidate standards. OMOP Standardized Vocabularies carry mixed per-vocab licences requiring special analysis. No sources are currently recorded in allowlist.yml. Depends on rare-cancer-registry-templates-license-001.",
+  "objective": "Research and record the licence determination for ≥5 candidate standards in `sources/allowlist.yml`, approving the open core (Mondo, ORDO, HPO, OncoTree, NCIt, mCODE, OMOP CDM, Phenopackets, DUO), and recording SNOMED CT, ICD-O-3, LOINC, and ICCR as restricted (stub-only). Capture the OMOP Standardized Vocabulary per-vocab licence caveat (some require SNOMED/CPT licences — open member vocabs only).",
+  "acceptanceCriteria": [
+    "≥5 candidate standards analysed with licence determination recorded in `sources/allowlist.yml` using the schema from license-001.",
+    "The open core (Mondo CC-BY-4.0, ORDO CC-BY-4.0, HPO permissive, OncoTree open/MSK, NCIt public/NCI, mCODE HL7, OMOP CDM CC-BY-4.0, GA4GH Phenopackets Apache-2.0, DUO CC-BY-4.0) recorded with status: approved.",
+    "SNOMED CT, ICD-O-3, LOINC, and ICCR recorded with restricted: true and status: rejected for embedding; stub-only use documented.",
+    "ISO/IEC 11179 recorded with a note that only the metadata-discipline model is adopted, not the copyrighted standard text.",
+    "OMOP Standardized Vocabularies caveat captured: only open member vocabs permitted; vocabs requiring SNOMED or CPT licences excluded.",
+    "Licence reviewer sign-off recorded in the allowlist or a companion reviewers ledger entry before the task is marked done."
+  ],
+  "resources": [
+    "PLAN.md",
+    "tasks/rare-cancer-registry-templates-license-001.json",
+    "sources/allowlist.yml"
+  ],
+  "output": "Populated `sources/allowlist.yml` with ≥5 analysed standards and their licence determinations; a companion research note documenting the analysis rationale, committed via PR with licence reviewer sign-off.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

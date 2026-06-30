@@ -1,0 +1,33 @@
+{
+  "id": "rare-cancer-registry-templates-ig-001",
+  "title": "FHIR ImplementationGuide + LinkML-generated docs starter-kit",
+  "project": "rare-cancer-registry-templates",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer-research", "open-standards", "health-data", "interoperability", "ci-cd"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "The M3 'shipped' deliverable requires a published FHIR ImplementationGuide (IG) and a docs starter-kit that an adopter can use to understand and instantiate the standards. The IG is generated from the mCODE/FHIR crosswalk profiles using the HL7 FHIR IG Publisher/Sushi; the docs site is generated from the LinkML CDE source. Both must lead with the standards-not-a-data-store and not-medical-advice notices and render the CDE set, crosswalks, and consent/governance templates with provenance. Depends on rare-cancer-registry-templates-crosswalk-001 and rare-cancer-registry-templates-consent-001. Standards reviewer and maintainer sign-off required.",
+  "objective": "Build the FHIR ImplementationGuide (`ig/`) and the docs starter-kit (`docs/`) that: (1) publish the rare-cancer CDE FHIR profiles generated from the mCODE crosswalk, (2) render the CDE set, vocab bindings, and crosswalks with provenance sourced from the LinkML output, (3) include the consent/governance templates, (4) provide an adopter onboarding guide explaining how to run a consent-first registry under the adopter's own IRB/REC and custody, and (5) lead every page with the standards-not-a-data-store and not-medical-advice notices.",
+  "acceptanceCriteria": [
+    "FHIR IG is generated and validates via the HL7 FHIR IG Publisher from the mCODE-aligned crosswalk profiles.",
+    "Published IG and docs site lead with 'standards-not-a-data-store' and 'not medical advice / not legal advice' notices on every page.",
+    "The CDE set, crosswalks, and consent/governance templates are rendered with provenance (source standard, identifier, licence note) per the prov-001 model.",
+    "Adopter onboarding guide explains how to instantiate a consent-first registry under the adopter's IRB/REC and custody, making clear that Elyos holds nothing.",
+    "`pnpm build && pnpm test && pnpm lint` green; standards reviewer and maintainer sign-off recorded."
+  ],
+  "resources": [
+    "PLAN.md",
+    "tasks/rare-cancer-registry-templates-crosswalk-001.json",
+    "tasks/rare-cancer-registry-templates-consent-001.json",
+    "tasks/rare-cancer-registry-templates-cde-001.json"
+  ],
+  "output": "An `ig/` FHIR ImplementationGuide and a `docs/` starter-kit site generated from LinkML and the FHIR IG Publisher, committed via PR with standards reviewer and maintainer sign-off.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

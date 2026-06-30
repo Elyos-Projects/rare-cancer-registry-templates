@@ -1,0 +1,34 @@
+{
+  "id": "rare-cancer-registry-templates-consent-002",
+  "title": "Deceased-patient / memorial-registry consent pattern + ethics notes",
+  "project": "rare-cancer-registry-templates",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "consent", "health-data", "governance", "regulatory"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Deceased-patient and memorial-registry data are a lower-barrier entry point for rare-cancer registries, but 'deceased-only' does not mean consent-free or ethics-free. HIPAA protects decedent PHI for 50 years after death (§164.502(f)); GDPR Recital 27 excludes deceased persons from scope but several member states legislate post-mortem data protection; surviving-relative privacy, genetic-relatedness implications, and family/community dignity obligations persist. This pattern must treat deceased data with its own ethical framework, not as a loophole. Depends on rare-cancer-registry-templates-consent-001. Bioethics + patient-advocate sign-off required.",
+  "objective": "Author the deceased-patient / memorial-registry consent pattern (`governance/consent/deceased-memorial-pattern.md`) covering: (1) the HIPAA 50-year decedent rule (§164.502(f)), (2) GDPR Recital 27 and EU member-state post-mortem data protection caveats, (3) next-of-kin / authorised-representative consent path and documentation, (4) surviving-relative privacy and genetic-implication notes, and (5) ethics notes establishing that deceased-only is not an ethics-free shortcut. Carries 'informational, not legal advice' framing throughout.",
+  "acceptanceCriteria": [
+    "Pattern includes the HIPAA 50-year decedent rule (§164.502(f)) with primary-source citation.",
+    "Pattern includes GDPR Recital 27 and notes EU member-state post-mortem data protection laws with primary-source citations and jurisdictional caveats.",
+    "Next-of-kin / authorised-representative consent path and required documentation are specified.",
+    "Surviving-relative privacy and genetic-relatedness implications are addressed with ethics notes.",
+    "Pattern explicitly states that deceased-only is not an ethics-free or consent-free shortcut: obligations persist.",
+    "Every page carries 'Informational — not legal advice; consult your IRB/REC, DPO, and counsel.'",
+    "Bioethics + patient-advocate sign-off recorded; sign-off is version-scoped."
+  ],
+  "resources": [
+    "PLAN.md",
+    "tasks/rare-cancer-registry-templates-consent-001.json",
+    "tasks/rare-cancer-registry-templates-partner-001.json"
+  ],
+  "output": "A `governance/consent/deceased-memorial-pattern.md` document covering HIPAA/GDPR decedent nuances, next-of-kin consent, and ethics notes, committed via PR only after bioethics + advocate sign-off.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

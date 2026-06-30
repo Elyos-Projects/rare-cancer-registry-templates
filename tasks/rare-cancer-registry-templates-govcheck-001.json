@@ -1,0 +1,34 @@
+{
+  "id": "rare-cancer-registry-templates-govcheck-001",
+  "title": "Governance-conformance checklist in the validator",
+  "project": "rare-cancer-registry-templates",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "governance", "health-data", "ci-cd", "consent"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The governance templates (consent, DSA, charter) define a set of required fields and sections (revocation path, data-use specification, lawful-basis placeholder, provenance). The validator (validate-001) should enforce these requirements so adopters get machine-readable feedback when their consent artifact is incomplete. Making non-consensual or under-governed use fail by default is a structural anti-misuse control. Depends on rare-cancer-registry-templates-governance-001 and rare-cancer-registry-templates-validate-001.",
+  "objective": "Extend the `validate` CLI with a governance-conformance checklist command that inspects an adopter's consent or governance artifact and fails if required fields are absent: revocation path, data-use specification (DUO codes), lawful-basis placeholder, and provenance. The checker should also verify that the 'not medical advice' / 'not legal advice' notices are present on patient-facing and regulatory surfaces.",
+  "acceptanceCriteria": [
+    "The validator's governance checklist fails an adopter's consent artifact that lacks a revocation path.",
+    "The validator's governance checklist fails an artifact that lacks a data-use specification (DUO codes).",
+    "The validator's governance checklist fails an artifact that lacks a lawful-basis placeholder.",
+    "The validator's governance checklist fails an artifact that lacks provenance on governance clauses.",
+    "The checker produces actionable failure messages identifying the specific missing field.",
+    "`pnpm build && pnpm test && pnpm lint` green; maintainer sign-off recorded."
+  ],
+  "resources": [
+    "PLAN.md",
+    "tasks/rare-cancer-registry-templates-governance-001.json",
+    "tasks/rare-cancer-registry-templates-validate-001.json",
+    "tasks/rare-cancer-registry-templates-consent-001.json"
+  ],
+  "output": "An extension to the `tools/validate` CLI adding a `governance-check` command with the conformance checklist, committed via PR with green CI.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

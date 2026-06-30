@@ -1,0 +1,33 @@
+{
+  "id": "rare-cancer-registry-templates-license-001",
+  "title": "Source allow-list schema + licence-gate policy (open-lead, restricted-stub rule)",
+  "project": "rare-cancer-registry-templates",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer-research", "open-standards", "health-data", "governance", "licensing"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Before any vocabulary or crosswalk work can begin, the project needs a machine-readable allow-list schema and a formal licence-gate policy that enforces the open-lead / restricted-stub rule. The binding Elyos cancer guardrails prohibit embedding or redistributing restricted terminologies (SNOMED CT, ICD-O-3, LOINC, ICCR). All sources must be individually approved by a licence reviewer before use. No sources are currently approved and no licence reviewer is engaged yet. See PLAN.md.",
+  "objective": "Define the `sources/allowlist.yml` schema and the licence-gate policy document that: (1) describes required allowlist fields per source, (2) codifies the open-lead rule (Mondo/ORDO/HPO/OncoTree/NCIt/mCODE/OMOP/Phenopackets/DUO as primary bindings) and the restricted-stub rule (SNOMED CT/ICD-O-3/LOINC/ICCR = code-only crosswalk stubs, never embedded content), and (3) states the 'no artifact more permissive than its most-restrictive embedded source' licence inheritance rule.",
+  "acceptanceCriteria": [
+    "`sources/allowlist.yml` schema defines required fields: name, custodian, URL, version, licence/legal basis, rights analysis, restricted (true|false), and status (approved|rejected|pending).",
+    "Policy states the open-lead rule: Mondo/ORDO/HPO/OncoTree/NCIt/mCODE/OMOP CDM/Phenopackets/DUO are the primary binding targets.",
+    "Policy states the restricted-stub rule: SNOMED CT, ICD-O-3, LOINC, and ICCR are categorically restricted; embedding proprietary descriptions or hierarchy is rejected; only code/identifier crosswalk stubs are permitted.",
+    "Policy states the 'no artifact more permissive than its most-restrictive embedded source' licence inheritance rule.",
+    "Policy requires that no source is used in any task until its allowlist entry has status: approved signed off by the licence reviewer.",
+    "Committed as a human-readable governance document plus the allowlist YAML schema via PR, with provenance to the Elyos cancer guardrails."
+  ],
+  "resources": [
+    "PLAN.md",
+    "CLAUDE.md",
+    "tasks/rare-cancer-registry-templates-gov-001.json"
+  ],
+  "output": "A `sources/allowlist.yml` schema file and a `governance/licence-gate-policy.md` policy document defining the allow-list schema, open-lead rule, restricted-stub rule, and licence inheritance rule, committed via PR.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

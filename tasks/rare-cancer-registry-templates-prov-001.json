@@ -1,0 +1,33 @@
+{
+  "id": "rare-cancer-registry-templates-prov-001",
+  "title": "Provenance model + countable assertion (administered-item) unit",
+  "project": "rare-cancer-registry-templates",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer-research", "open-standards", "health-data", "governance", "interoperability"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "The project's quality bar requires 100% provenance on every assertion — each CDE, vocabulary binding, crosswalk row, governance clause, and regulatory claim. To make this mechanically checkable by CI, the project needs a defined provenance model with a named countable unit (the administered item, per ISO/IEC 11179 discipline). Without this model, the provenance-completeness linter (ci-001) cannot be built. Depends on rare-cancer-registry-templates-gov-001.",
+  "objective": "Define the provenance model for the project: (1) name and describe the countable assertion unit (the administered item, per ISO/IEC 11179 discipline applied — not text copied), (2) specify the required provenance record fields for every administered item (source name, identifier/citation, retrieval date, URL, verified licence/legal status), and (3) define staleness semantics with `lastVerified` and `validUntil` fields and the fail-safe auto-flag/withhold behaviour for stale HIGH-tier claims.",
+  "acceptanceCriteria": [
+    "The administered item is named as the countable assertion unit; the definition aligns with ISO/IEC 11179 metadata-registry discipline without reproducing copyrighted standard text.",
+    "Required provenance record fields specified: source name, identifier/citation, retrieval date, URL, and verified licence/legal status.",
+    "Staleness fields defined: `lastVerified` (date) and `validUntil` (date), with per-source-type review intervals (e.g., ontologies on major release; regulatory mapping on short cadence).",
+    "Fail-safe staleness behaviour documented: a binding or claim past `validUntil` is auto-flagged; HIGH-tier regulatory claims past `validUntil` are withheld from publication until re-verified and re-signed-off.",
+    "Provenance model covers all administered-item classes: CDEs, vocabulary bindings, crosswalk rows, governance clauses, and regulatory claims.",
+    "Published as a human-readable governance document committed via PR, referenced in the project constitution and the CI scaffold."
+  ],
+  "resources": [
+    "PLAN.md",
+    "tasks/rare-cancer-registry-templates-gov-001.json",
+    "tasks/rare-cancer-registry-templates-license-001.json"
+  ],
+  "output": "A `governance/provenance-model.md` document defining the administered-item unit, provenance record fields, and staleness semantics, committed via PR.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}
