@@ -1,0 +1,34 @@
+{
+  "id": "rare-cancer-registry-templates-jurmatrix-001",
+  "title": "Deceased-data jurisdictional rules matrix",
+  "project": "rare-cancer-registry-templates",
+  "type": "research",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer-research", "regulatory", "health-data", "governance", "consent"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The deceased-patient consent pattern (consent-002) includes GDPR Recital 27 and HIPAA decedent-rule notes, but a comprehensive matrix of post-mortem data protection rules across jurisdictions would give adopters clearer guidance. This is HIGH risk-tier: any jurisdictional legal claim must be primary-source-cited and bioethics/legal-reviewed before publication. This is unscheduled backlog; the number of jurisdictions to cover should be determined with the bioethics reviewer. Must depend on consent-002 and compliance-001 being merged.",
+  "objective": "Research and produce a deceased-data jurisdictional rules matrix (`compliance/deceased-data-jurisdictions.md`) covering post-mortem health-data protection rules across key jurisdictions relevant to the adopting communities (at minimum: EU/GDPR + selected member states with post-mortem laws, USA/HIPAA, UK, Canada, Australia). Each row covers: jurisdiction, legal basis for post-mortem health data, applicable duration/limitations, next-of-kin/authorised-representative obligations, and primary-source citation. Framed as 'informational — not legal advice' throughout.",
+  "acceptanceCriteria": [
+    "Matrix covers at minimum: EU/GDPR + ≥3 EU member states with post-mortem data protection laws (e.g., France, Germany, Italy), USA/HIPAA §164.502(f), and ≥2 other jurisdictions (UK, Canada, or Australia).",
+    "Each row includes: jurisdiction, legal basis/statute, applicable duration, next-of-kin/authorised-representative obligations, and primary-source citation.",
+    "Every claim is primary-source-cited with the specific statute, article, or section and a retrieval date.",
+    "Every page carries 'Informational — not legal advice; consult your legal counsel and DPO for your specific jurisdiction.'",
+    "Staleness fields set: `lastVerified` and `validUntil` per jurisdiction; high-change jurisdictions noted for shorter review cadence.",
+    "Bioethics/legal reviewer sign-off recorded, version-scoped, before publication."
+  ],
+  "resources": [
+    "PLAN.md",
+    "tasks/rare-cancer-registry-templates-consent-002.json",
+    "tasks/rare-cancer-registry-templates-compliance-001.json",
+    "tasks/rare-cancer-registry-templates-partner-001.json"
+  ],
+  "output": "A `compliance/deceased-data-jurisdictions.md` jurisdictional matrix with primary-source citations, `lastVerified`/`validUntil` per row, and 'not legal advice' notices, committed via PR with bioethics/legal reviewer sign-off.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "rare-cancer-registry-templates-partner-001",
+  "title": "Reviewer + adopting-community outreach (oncologist, advocate, bioethics/legal, licence)",
+  "project": "rare-cancer-registry-templates",
+  "type": "research",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "open-standards", "health-data", "governance", "community"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "No expert reviewers (oncologist, patient advocate, bioethics/IRB, health-data-privacy professional, or licence reviewer) are currently engaged, and no adopting rare-cancer community or steward has committed to the project. HIGH-tier consent/legal work (M2) cannot start without credentialed reviewers; the project cannot reach Definition of Shipped without an adopting community. The partner-acquisition plan in PLAN.md is time-boxed: ≥3 candidate adopters in active conversation by 2026-08-31; clinical-oncology and patient-advocate reviewers secured by 2026-10-31; adopting community/steward secured by 2027-01-31. This task initiates and tracks that outreach.",
+  "objective": "Conduct and document structured outreach to identify and engage: (1) a licence reviewer to approve `sources/allowlist.yml` entries, (2) a standards/domain reviewer for CDE and crosswalk correctness, (3) a clinical oncologist and patient advocate to sign off HIGH-tier patient-facing content, (4) a bioethics/IRB or health-data-privacy professional to sign off the consent design and regulatory mapping, and (5) ≥3 candidate adopting communities (rare-cancer patient organisation, natural-history registry effort, or ERN/EURACAN-affiliated group). Log outreach status, responses, and next steps in a living status document.",
+  "acceptanceCriteria": [
+    "Outreach initiated to ≥3 candidate adopting communities (patient organisation, registry effort, or rare-cancer reference network) with contact records and status logged.",
+    "Outreach initiated for all four reviewer roles: licence reviewer, standards/domain reviewer, clinical oncologist + patient advocate (pair for HIGH-tier), and bioethics/IRB or health-data-privacy professional.",
+    "Status document committed (`governance/partner-outreach-status.md`) tracking each contact: role, organisation, date contacted, response, and next step.",
+    "COI disclosure procedure noted in the status document (reviewers must disclose and recuse from matters touching their own registry/organisation).",
+    "Status document is updated (at minimum) at each milestone exit; if no HIGH-tier reviewers are secured by the M2 entry date, the status document records the hold decision per PLAN.md.",
+    "If no adopting community is secured by 2027-01-31, the status document records the pivot/mothball decision rule per PLAN.md."
+  ],
+  "resources": [
+    "PLAN.md",
+    "CLAUDE.md",
+    "tasks/rare-cancer-registry-templates-gov-001.json"
+  ],
+  "output": "A `governance/partner-outreach-status.md` living document recording reviewer and adopter outreach contacts, statuses, and next steps, committed via PR and updated at milestone exits.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

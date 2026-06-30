@@ -1,0 +1,33 @@
+{
+  "id": "rare-cancer-registry-templates-care-001",
+  "title": "CARE-principles / Indigenous data-governance template module",
+  "project": "rare-cancer-registry-templates",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer-research", "governance", "health-data", "consent", "community"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Rare cancers disproportionately affect some Indigenous and underserved communities, and data collected about these communities carries obligations under the CARE Principles for Indigenous Data Governance (Collective Benefit, Authority to Control, Responsibility, Ethics). The FAIR/CARE checklist (governance-001) references CARE at a high level, but a dedicated template module provides deeper, community-aligned guidance. This is unscheduled backlog; it must be community-co-designed — not a generic checkbox — and requires Indigenous community partnership to avoid tokenism. Must depend on governance-001 being merged.",
+  "objective": "Develop a CARE-principles / Indigenous data-governance template module (`governance/care-module.md`) that provides actionable, community-co-designed guidance for registry teams working with Indigenous communities: (1) operationalising each CARE principle (Collective Benefit, Authority to Control, Responsibility, Ethics) in a rare-cancer registry context, (2) data-sovereignty considerations including tribal/community governance structures and data-return obligations, and (3) practical checklist items that adapt to a specific community's governance rather than a one-size-fits-all checkbox. Must note that this module requires Indigenous community partnership to finalise.",
+  "acceptanceCriteria": [
+    "Module operationalises all four CARE principles in a rare-cancer registry context with concrete examples.",
+    "Data-sovereignty section addresses: community ownership of data, community governance approval process, data-return obligations, and publication consent by the community.",
+    "Module explicitly states it requires community co-design with the specific Indigenous community before adoption — it is a starting template, not a final product.",
+    "Attribution to the CARE Principles source (Global Indigenous Data Alliance / Carroll et al.) with citation and licence note.",
+    "Provenance per the prov-001 model; CI linter passes.",
+    "Maintainer review and, where possible, initial Indigenous community advisor feedback recorded before publication."
+  ],
+  "resources": [
+    "PLAN.md",
+    "tasks/rare-cancer-registry-templates-governance-001.json",
+    "tasks/rare-cancer-registry-templates-partner-001.json"
+  ],
+  "output": "A `governance/care-module.md` CARE-principles template module with actionable rare-cancer guidance and community-co-design notes, committed via PR.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

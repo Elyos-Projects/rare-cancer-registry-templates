@@ -1,0 +1,33 @@
+{
+  "id": "rare-cancer-registry-templates-dynconsent-001",
+  "title": "Reference (non-data-holding) dynamic-consent state schema",
+  "project": "rare-cancer-registry-templates",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer-research", "consent", "health-data", "governance", "open-standards"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The consent templates include a dynamic-consent model, but implementing that model requires a consent-state schema that allows adopters to track participant consent choices over time. This is unscheduled backlog with scope-creep risk: the deliverable must be a schema only (the data structure for consent-state events), never a running service or data-holding component. Elyos holds no data; adopters implement this schema in their own custody. Must depend on consent-001 being merged.",
+  "objective": "Design a reference consent-state schema (`schemas/dynamic-consent-state/`) in LinkML/JSON Schema that models: (1) participant consent events (initial consent, scope changes, revocation), (2) data-use specification per event (DUO codes), (3) downstream-propagation trigger status, and (4) timestamps. The schema is a reference specification only; it defines the data structure adopters implement in their own systems, with explicit scope notes that Elyos never holds this data.",
+  "acceptanceCriteria": [
+    "Schema models consent events: initial consent, scope change, and revocation, each with timestamp and DUO data-use specification.",
+    "Downstream-propagation trigger status is included: whether downstream uses have been notified of a revocation.",
+    "Schema carries an explicit scope note: this is a reference schema for adopters; the project never holds, processes, or stores consent-state data.",
+    "Schema is authored in LinkML and generates valid JSON Schema; `pnpm build && pnpm test && pnpm lint` green.",
+    "Provenance on the schema's design sources (FHIR Consent resource, DUO) per the prov-001 model.",
+    "Maintainer and bioethics review noted (to confirm the schema does not inadvertently create a data-holding pattern)."
+  ],
+  "resources": [
+    "PLAN.md",
+    "tasks/rare-cancer-registry-templates-consent-001.json",
+    "tasks/rare-cancer-registry-templates-cde-001.json"
+  ],
+  "output": "A `schemas/dynamic-consent-state/` LinkML + JSON Schema specification for consent-state events, with scope notes, committed via PR.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

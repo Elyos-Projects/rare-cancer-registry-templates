@@ -1,0 +1,34 @@
+{
+  "id": "rare-cancer-registry-templates-extend-001",
+  "title": "Per-disease extension pattern, validated on one exemplar subtype",
+  "project": "rare-cancer-registry-templates",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer-research", "open-standards", "health-data", "interoperability", "ontology"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The CDE set is designed as a minimal core plus optional modules, with per-disease specialisation demonstrated on at most one or two exemplar subtypes rather than built exhaustively for all rare cancers. Once a community has adopted the standards, the extension pattern should be documented and validated so other communities can specialise without duplicating effort or diverging from the shared core. Depends on rare-cancer-registry-templates-adopt-001. Standards reviewer and oncologist reviewer sign-off required.",
+  "objective": "Document and validate the per-disease extension pattern (`docs/extension-pattern.md` + exemplar extension in `extensions/`): (1) describe the LinkML pattern for creating a disease-specific extension to the minimal core, (2) specify how extension CDEs inherit or override core fields, bind to disease-specific ontologies, and carry provenance, (3) validate the pattern on one exemplar rare cancer (e.g., a sarcoma subtype or ultra-rare tumour with mature open ontology coverage) using synthetic fixtures, and (4) confirm the exemplar extension passes CI without requiring changes to the core.",
+  "acceptanceCriteria": [
+    "Extension pattern documented: how to add disease-specific CDEs in LinkML without modifying the minimal core; inheritance and override rules specified.",
+    "Exemplar extension created for one named rare-cancer subtype (decided with the adopting community) using open-vocabulary bindings and synthetic fixtures.",
+    "Exemplar extension carries 100% provenance per the prov-001 model; CI provenance linter and licence deny-list linter pass.",
+    "The exemplar round-trips through the crosswalk (to mCODE/OMOP/Phenopackets) using the synthetic test-bank; CI tests pass.",
+    "Core CDE set is unchanged by the extension (extension is additive only).",
+    "`pnpm build && pnpm test && pnpm lint` green; standards reviewer and oncologist sign-off recorded."
+  ],
+  "resources": [
+    "PLAN.md",
+    "tasks/rare-cancer-registry-templates-adopt-001.json",
+    "tasks/rare-cancer-registry-templates-cde-001.json",
+    "tasks/rare-cancer-registry-templates-testbank-001.json"
+  ],
+  "output": "A `docs/extension-pattern.md` guide and a `extensions/<exemplar-subtype>/` LinkML extension with synthetic fixtures, committed via PR with standards reviewer and oncologist sign-off.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "rare-cancer-registry-templates-adopt-001",
+  "title": "Secure adopting community; stand up/harmonise a consent-first registry against the standard",
+  "project": "rare-cancer-registry-templates",
+  "type": "research",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer-research", "open-standards", "health-data", "governance", "community"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "This task is the Definition of Shipped for the project: a named rare-cancer community must adopt the CDE set and consent/governance toolkit to stand up or harmonise a consent-first registry with their own IRB/REC approval and custody. The project's `verifiedNeed` is false until this task is completed with a real adopter. Depends on rare-cancer-registry-templates-testbank-001 and rare-cancer-registry-templates-partner-001. Gated on a secured adopting community per the partner plan — if none is secured by 2027-01-31, the pivot/mothball rule applies (see PLAN.md).",
+  "objective": "Secure a named rare-cancer community (patient organisation, natural-history-registry team, or rare-cancer reference network) as the adopting partner and support them to: (1) adopt the CDE set and consent/governance toolkit for a consent-first registry under their own IRB/REC and custody, (2) produce a conformance report (CDE schema + crosswalk round-trip + governance checklist) on synthetic test data, and (3) confirm that no patient data ever flows to this project. Document the adoption and outcomes.",
+  "acceptanceCriteria": [
+    "A named rare-cancer community (patient organisation, registry effort, or reference network) is documented as having adopted the CDE set and consent/governance toolkit.",
+    "A conformance report is produced on the adopter's synthetic test data covering: CDE schema validation, crosswalk round-trips (mCODE/OMOP/Phenopackets), and governance checklist.",
+    "The adopter confirms in writing that their registry operates under their own IRB/REC approval and consent, and that no patient data flows to this project.",
+    "At least one documented adoption or citation is recorded (e.g., adopter's registry documentation, a publication reference, or an upstream contribution).",
+    "Outcomes are recorded in `governance/outcomes-log.md`: community name, adoption date, conformance report reference, and the 'no patient data held by this project' confirmation.",
+    "Steward and maintainer sign-off recorded."
+  ],
+  "resources": [
+    "PLAN.md",
+    "tasks/rare-cancer-registry-templates-testbank-001.json",
+    "tasks/rare-cancer-registry-templates-partner-001.json",
+    "tasks/rare-cancer-registry-templates-ig-001.json"
+  ],
+  "output": "A `governance/outcomes-log.md` recording the adopting community, the conformance report, and the no-patient-data confirmation, committed via PR with steward and maintainer sign-off.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

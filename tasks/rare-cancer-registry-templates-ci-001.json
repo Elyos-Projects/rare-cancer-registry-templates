@@ -1,0 +1,35 @@
+{
+  "id": "rare-cancer-registry-templates-ci-001",
+  "title": "CI scaffold: provenance linter + licence deny-list + 'no real data' scan",
+  "project": "rare-cancer-registry-templates",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer-research", "open-standards", "health-data", "ci-cd", "governance"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The no-data boundary and licence guardrails are only as strong as CI enforcement. The project needs three CI gates before any content work begins: (1) a provenance-completeness linter that fails the build on any administered item lacking a resolvable provenance link, (2) a licence deny-list scan that fails on embedded restricted terminology (SNOMED CT, ICD-O-3, LOINC, ICCR proprietary descriptions/hierarchy), and (3) a 'no real data' scan plus synthetic-attestation check that fails on any fixture lacking an attestation. Depends on rare-cancer-registry-templates-prov-001 and rare-cancer-registry-templates-license-001.",
+  "objective": "Build the CI scaffold as a TypeScript/ESM pnpm package (or scripts) that provides: (1) a provenance-completeness linter checking every administered item in the repo against the provenance model from prov-001, (2) a licence deny-list scanner that flags any commit containing embedded descriptions or hierarchy from SNOMED CT, ICD-O-3, LOINC, or ICCR datasets, and (3) a 'no real data' scanner that checks every fixture file for a valid synthetic-data attestation per the format defined in gov-001. All three gates must run in CI (`pnpm build && pnpm test && pnpm lint` green).",
+  "acceptanceCriteria": [
+    "CI fails on any administered item (CDE, vocab binding, crosswalk row, governance clause, regulatory claim) lacking a resolvable provenance link per the prov-001 model.",
+    "CI licence deny-list scan fails on any file containing embedded restricted terminology: descriptions or hierarchy from SNOMED CT, ICD-O-3, LOINC, or ICCR derivative content.",
+    "CI 'no real data' scan fails on any fixture lacking a valid synthetic-data attestation in the format defined by gov-001.",
+    "All three linters are integrated as pnpm scripts and run in CI; `pnpm build && pnpm test && pnpm lint` green on a clean repo with conforming content.",
+    "Failure messages are actionable: they identify the specific file and the missing/offending field.",
+    "The scaffold is agent-neutral (no vendor-specific logic); it lives in `tools/` or `ci/` following the agent-neutral core rules in CLAUDE.md."
+  ],
+  "resources": [
+    "PLAN.md",
+    "CLAUDE.md",
+    "tasks/rare-cancer-registry-templates-gov-001.json",
+    "tasks/rare-cancer-registry-templates-prov-001.json",
+    "tasks/rare-cancer-registry-templates-license-001.json"
+  ],
+  "output": "A `tools/ci/` (or `ci/`) package with the provenance linter, licence deny-list scanner, and 'no real data' scanner integrated into pnpm CI scripts, committed via PR with green CI.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

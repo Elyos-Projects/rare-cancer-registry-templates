@@ -1,0 +1,35 @@
+{
+  "id": "rare-cancer-registry-templates-cde-001",
+  "title": "Minimal-core CDE set in LinkML (de-identified-by-design)",
+  "project": "rare-cancer-registry-templates",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer-research", "open-standards", "health-data", "interoperability", "ontology"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "The core deliverable of this project is a minimal, extensible rare-cancer Common Data Element (CDE) set that small registries can adopt to produce trustworthy, FAIR, poolable data. The CDE set must be de-identified-by-design (no full DOB, no free-text identifiers, geographic generalisation) with re-identification-risky fields quarantined in clearly-flagged optional modules. It must be authored in LinkML (which generates JSON Schema, SHACL, and documentation and supports class/slot-level provenance and mappings), bound to open vocabularies per the licence-gate policy, and carry 100% provenance per the prov-001 model. Depends on rare-cancer-registry-templates-ci-001 and rare-cancer-registry-templates-license-002. Licence reviewer sign-off required.",
+  "objective": "Author the minimal-core rare-cancer CDE set in LinkML with: (1) de-identified-by-design fields only in the core (year not full DOB, generalised geography, no free-text identifiers), each with a `deIdentDesign` note; (2) optional clearly-flagged modules for richer fields (diagnosis/histology, staging, molecular/biomarker, treatment, outcome/vital status); (3) a consent-metadata module (consent status, scope/data-use, revocation state); (4) 100% provenance on every CDE per the prov-001 model; and (5) open-vocabulary bindings (Mondo/ORDO for disease, OncoTree/NCIt for oncology, HPO for phenotype) with restricted-terminology crosswalk stubs only.",
+  "acceptanceCriteria": [
+    "Minimal core holds only de-identified-by-design fields; each field carries a `deIdentDesign` note explaining why it is safe-by-construction.",
+    "Re-identification-risky elements are placed in optional, clearly-flagged modules, not the core; an adopter must explicitly enable these modules.",
+    "Every CDE carries: definition, datatype, value-set binding, `patientFacing` flag, and 100% provenance (source standard, identifier, retrieval date, licence note) per the prov-001 model.",
+    "A consent-metadata module is included with fields for consent status, scope/data-use specification (DUO codes), and revocation state.",
+    "Disease/phenotype bindings use open primary systems (Mondo/ORDO/HPO/OncoTree/NCIt); SNOMED CT/ICD-O-3/LOINC bindings are crosswalk stubs only (codes/IDs, no proprietary content); CI licence linter green.",
+    "LinkML generates valid JSON Schema and SHACL from the CDE source; `pnpm build && pnpm test && pnpm lint` green.",
+    "Standards/domain reviewer and licence reviewer sign-off recorded before the task is marked done."
+  ],
+  "resources": [
+    "PLAN.md",
+    "tasks/rare-cancer-registry-templates-ci-001.json",
+    "tasks/rare-cancer-registry-templates-license-002.json",
+    "tasks/rare-cancer-registry-templates-prov-001.json"
+  ],
+  "output": "A `cde/` directory containing the LinkML source-of-truth for the minimal-core CDE set plus optional modules, generating JSON Schema and SHACL, committed via PR with standards and licence reviewer sign-off.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

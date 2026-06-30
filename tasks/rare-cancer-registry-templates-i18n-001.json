@@ -1,0 +1,33 @@
+{
+  "id": "rare-cancer-registry-templates-i18n-001",
+  "title": "Multilingual consent/explainer templates (plain-language)",
+  "project": "rare-cancer-registry-templates",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer-research", "consent", "health-data", "governance", "community"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "translation",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Rare-cancer communities are international; consent and explainer templates in English only exclude non-English-speaking patients and families. Plain-language translations of the consent templates and any patient/family-facing explainers are HIGH risk-tier: each language version requires per-language oncologist + patient-advocate review and sign-off before publication, and every translation must carry 'education only — not medical advice' notices. This is unscheduled backlog; it must not start without M2 consent templates (consent-001) being merged and HIGH-tier reviewers for each target language being secured. No specific target languages are enumerated yet — they will be determined by the adopting community's needs.",
+  "objective": "Translate the consent templates and patient/family-facing explainers from consent-001 into plain-language versions in the target language(s) identified by the adopting community. Each translation must undergo: (1) clinical accuracy review by a clinical oncologist fluent in the target language, (2) patient-advocate plain-language review, and (3) 'education only — not medical advice' notice in the target language. Provenance must record the translator, reviewers, and review dates.",
+  "acceptanceCriteria": [
+    "Translations produced for the target language(s) specified by the adopting community; no languages are fabricated beyond those requested.",
+    "Each translated consent template and explainer carries a 'education only — not medical advice' notice in the target language.",
+    "Per-language clinical oncologist sign-off recorded, version-scoped.",
+    "Per-language patient-advocate plain-language review recorded, version-scoped.",
+    "Provenance records translator identity/method, reviewer names (with consent), review dates, and the source version translated.",
+    "Translations are clearly labelled as translations of the source version; changes from the source are documented."
+  ],
+  "resources": [
+    "PLAN.md",
+    "tasks/rare-cancer-registry-templates-consent-001.json",
+    "tasks/rare-cancer-registry-templates-partner-001.json"
+  ],
+  "output": "Translated consent and explainer templates in `i18n/<language-code>/` directories, each with per-language 'not medical advice' notices and reviewer sign-off records, committed via PR.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

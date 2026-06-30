@@ -1,0 +1,33 @@
+{
+  "id": "rare-cancer-registry-templates-sustain-001",
+  "title": "Sustainability: version policy, staleness cadence, upstream-contribution + reviewer rotation plan",
+  "project": "rare-cancer-registry-templates",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer-research", "open-standards", "health-data", "governance", "maintenance"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "After a successful adoption, the standards must be maintained: terminologies evolve (FHIR/mCODE versions, ontology releases), regulatory text is updated, and expert reviewers must rotate to avoid stagnation. Without a version policy, staleness cadence, and reviewer rotation plan, the standards will become outdated and potentially unsafe. Outcomes should be tracked as consent-first registries adopted, not downloads. Depends on rare-cancer-registry-templates-adopt-001.",
+  "objective": "Document the sustainability plan (`governance/sustainability-plan.md`) covering: (1) semantic versioning policy for the CDE set, crosswalks, consent templates, and governance docs; (2) staleness cadence — per-source-type `validUntil` review intervals (ontologies on major release, regulatory mapping on short cadence) and the auto-flag/withhold process for stale HIGH-tier claims; (3) upstream-contribution path (OHDSI oncology workgroup, GA4GH driver project, ERN/rare-disease network); and (4) reviewer rotation plan for all roles (maintainer, licence reviewer, standards reviewer, credentialed HIGH-tier reviewers).",
+  "acceptanceCriteria": [
+    "Version policy defines semantic versioning for the CDE set, crosswalks, consent templates, and governance docs; major/minor/patch semantics described.",
+    "Staleness cadence specifies review intervals per source type (ontology major release, FHIR IG version, regulatory text on short cadence) and the auto-flag/withhold process per the prov-001 model.",
+    "Upstream-contribution path identifies at least one standards body (OHDSI, GA4GH, or ERN-affiliated network) and describes the contribution process.",
+    "Reviewer rotation plan specifies how each role (maintainer, licence, standards, oncologist+advocate, bioethics/legal) is recruited, rotated, and transitioned.",
+    "Outcomes tracking method defined: consent-first registries adopted, conformance reports issued, upstream contributions — not downloads or stars.",
+    "Maintainer sign-off recorded."
+  ],
+  "resources": [
+    "PLAN.md",
+    "tasks/rare-cancer-registry-templates-adopt-001.json",
+    "tasks/rare-cancer-registry-templates-prov-001.json"
+  ],
+  "output": "A `governance/sustainability-plan.md` covering version policy, staleness cadence, upstream-contribution path, reviewer rotation, and outcomes tracking, committed via PR with maintainer sign-off.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

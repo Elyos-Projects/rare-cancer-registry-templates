@@ -1,0 +1,34 @@
+{
+  "id": "rare-cancer-registry-templates-deid-001",
+  "title": "De-identification design guidance (Safe Harbor / Expert Determination)",
+  "project": "rare-cancer-registry-templates",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer-research", "health-data", "governance", "regulatory", "open-standards"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Adopters of the CDE set who want to share data beyond their registry need de-identification guidance. The project provides de-identification *design* guidance so adopters de-identify their own data in their own custody — the project never receives identifiable data to de-identify. This is HIGH risk-tier: guidance on HIPAA Safe Harbor and Expert Determination methods is informational and must be primary-source-cited and bioethics/legal-reviewed. The CDE minimal core is already de-identified-by-design, so this document complements it with guidance on optional module fields. This is unscheduled backlog.",
+  "objective": "Author de-identification design guidance (`compliance/deid-guidance.md`) covering: (1) HIPAA §164.514(b) Safe Harbor method — the 18 identifier categories to remove — and Expert Determination method with primary-source citations; (2) how the minimal-core CDE set is de-identified-by-design and which optional module fields require additional de-identification before sharing; (3) field-level notes on re-identification risk in the optional modules; and (4) clear 'guidance only — we never receive identifiable data' and 'informational, not legal advice' notices throughout.",
+  "acceptanceCriteria": [
+    "HIPAA §164.514(b) Safe Harbor method (18 identifier categories) is described with primary-source citation.",
+    "HIPAA §164.514(b) Expert Determination method is described with primary-source citation.",
+    "Document explains how the minimal-core CDE fields are de-identified-by-design and which optional module fields introduce re-identification risk.",
+    "Field-level notes in the optional modules are referenced, stating which fields need de-identification before sharing.",
+    "Document carries 'Guidance only — this project never receives identifiable data to de-identify' and 'Informational — not legal advice; consult your IRB/REC, DPO, and counsel' notices on every page.",
+    "Bioethics/legal reviewer sign-off recorded, version-scoped, before publication."
+  ],
+  "resources": [
+    "PLAN.md",
+    "tasks/rare-cancer-registry-templates-cde-001.json",
+    "tasks/rare-cancer-registry-templates-compliance-001.json",
+    "tasks/rare-cancer-registry-templates-partner-001.json"
+  ],
+  "output": "A `compliance/deid-guidance.md` document with primary-source-cited Safe Harbor and Expert Determination guidance, field-level notes, and 'not legal advice' notices, committed via PR with bioethics/legal reviewer sign-off.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

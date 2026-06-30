@@ -1,0 +1,34 @@
+{
+  "id": "rare-cancer-registry-templates-crosswalk-001",
+  "title": "Crosswalks CDE ⇄ mCODE/FHIR, OMOP CDM, GA4GH Phenopackets",
+  "project": "rare-cancer-registry-templates",
+  "type": "data",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer-research", "open-standards", "health-data", "interoperability", "ontology"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "The project's poolability proof — that a registry built from the CDE templates is automatically compatible with the major open-oncology ecosystems — depends on deterministic crosswalk mappings from the rare-cancer CDE set to mCODE/FHIR, OMOP CDM, and GA4GH Phenopackets. These crosswalks must be machine-readable and proven by a synthetic round-trip conformance test. Every crosswalk row must carry provenance, and lossy mappings must be documented rather than silently dropped. Depends on rare-cancer-registry-templates-vocab-001. Standards reviewer sign-off required.",
+  "objective": "Produce machine-readable crosswalk tables in `crosswalks/` mapping the CDE set bi-directionally to: (1) mCODE/HL7 FHIR profiles, (2) OMOP CDM (open vocabularies only), and (3) GA4GH Phenopackets. Each crosswalk row must carry provenance and document any lossy or approximate mappings. Prove correctness with a synthetic record that round-trips through all three targets and validates against each.",
+  "acceptanceCriteria": [
+    "Crosswalk tables covering CDE ⇄ mCODE/FHIR, CDE ⇄ OMOP CDM, and CDE ⇄ GA4GH Phenopackets are committed in `crosswalks/` as machine-readable files.",
+    "Every crosswalk row carries provenance (source CDE, target system element, mapping rationale, retrieval date, licence note) per the prov-001 model.",
+    "Lossy or approximate mappings are explicitly documented with a `lossNote` or equivalent field; no mapping is silently dropped.",
+    "A synthetic record expressed in the CDE set round-trips to mCODE FHIR, OMOP CDM, and Phenopackets and validates against each target schema.",
+    "OMOP CDM crosswalk uses only open member vocabularies (no SNOMED or CPT-licensed vocabs); CI licence linter green.",
+    "Standards reviewer sign-off recorded; `pnpm build && pnpm test && pnpm lint` green."
+  ],
+  "resources": [
+    "PLAN.md",
+    "tasks/rare-cancer-registry-templates-vocab-001.json",
+    "tasks/rare-cancer-registry-templates-cde-001.json",
+    "tasks/rare-cancer-registry-templates-ci-001.json"
+  ],
+  "output": "A `crosswalks/` directory with machine-readable CDE ⇄ mCODE/FHIR, CDE ⇄ OMOP CDM, and CDE ⇄ Phenopackets crosswalk tables plus a round-trip conformance test on synthetic data, committed via PR with standards reviewer sign-off.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

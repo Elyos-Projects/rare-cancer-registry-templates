@@ -1,0 +1,35 @@
+{
+  "id": "rare-cancer-registry-templates-consent-001",
+  "title": "Consent templates (broad/tiered/dynamic) + FHIR Consent model w/ revocation + DUO",
+  "project": "rare-cancer-registry-templates",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer-research", "consent", "health-data", "governance", "regulatory"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "Consent is the ethical spine of the registry standards. M2 is gated on HIGH-tier reviewers being secured: a clinical oncologist, patient advocate, and bioethics/IRB professional must all be engaged before this task starts (see PLAN.md M2 entry gate). The consent templates must cover broad, tiered, and dynamic consent models; each must specify a working revocation-and-downstream-propagation path, explicit data-use specification via GA4GH DUO codes, lawful-basis placeholders, and a return-of-results policy. Templates are provided in both human-readable and structured FHIR Consent resource form. All patient-facing language carries 'education only — not medical advice' notices and requires oncologist + patient-advocate sign-off. Depends on rare-cancer-registry-templates-cde-001. M2 entry gate (HIGH-tier reviewers secured) must be satisfied.",
+  "objective": "Author the consent template suite (`governance/consent/`) covering broad, tiered, and dynamic consent models, each as: (1) a human-readable template with plain-language review, (2) a structured FHIR Consent resource with revocation + downstream-propagation language modelled, and (3) GA4GH DUO data-use codes tagged, lawful-basis placeholders for GDPR Art. 6/9 and HIPAA, and a return-of-results policy section. Every template carries 'education only — not medical advice' and 'not legal advice' notices and must not ship without oncologist + patient-advocate and bioethics sign-off.",
+  "acceptanceCriteria": [
+    "Templates cover three consent models: broad, tiered, and dynamic; each in human-readable and structured FHIR Consent resource form.",
+    "Every template specifies a working revocation + downstream-propagation path: how a participant revokes, how downstream uses are notified and halted.",
+    "Every template includes an explicit data-use specification using GA4GH DUO codes.",
+    "Lawful-basis placeholders for GDPR Art. 6/9 and HIPAA are present in every template; they are labelled as placeholders for the adopter to complete with their counsel.",
+    "A return-of-results policy section is included in every template.",
+    "Every patient-facing surface carries 'Education only — not medical advice' and 'Informational — not legal advice; consult your IRB/REC, DPO, and counsel' notices.",
+    "Oncologist + patient-advocate sign-off recorded; bioethics sign-off on lawful-basis design recorded; sign-off is version-scoped.",
+    "`pnpm build && pnpm test && pnpm lint` green."
+  ],
+  "resources": [
+    "PLAN.md",
+    "tasks/rare-cancer-registry-templates-cde-001.json",
+    "tasks/rare-cancer-registry-templates-partner-001.json"
+  ],
+  "output": "A `governance/consent/` directory with broad, tiered, and dynamic consent templates in Markdown + FHIR Consent resource format, committed via PR only after oncologist + patient-advocate + bioethics sign-off.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

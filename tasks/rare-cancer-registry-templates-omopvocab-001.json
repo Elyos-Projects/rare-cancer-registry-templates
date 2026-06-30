@@ -1,0 +1,35 @@
+{
+  "id": "rare-cancer-registry-templates-omopvocab-001",
+  "title": "Open-only OMOP vocabulary mapping pack",
+  "project": "rare-cancer-registry-templates",
+  "type": "data",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer-research", "open-standards", "health-data", "interoperability", "ontology"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The OMOP CDM crosswalk (crosswalk-001) maps CDE fields to OMOP CDM structure but the OMOP Standardized Vocabularies have mixed per-vocab licences — some require SNOMED CT or CPT licences, which are restricted. A dedicated open-only OMOP vocabulary mapping pack provides adopters with the complete set of mappings that use only open-licensed OMOP member vocabularies (excluding SNOMED and CPT-licenced vocabs). This is unscheduled backlog, extending the crosswalk-001 work. Depends on vocab-001 and crosswalk-001 being merged, and requires licence reviewer sign-off.",
+  "objective": "Produce an open-only OMOP vocabulary mapping pack (`vocab/omop-open-pack/`) covering the full set of CDE field mappings to OMOP Standardized Vocabulary concepts, using only open-licensed OMOP member vocabularies. Excluded vocabs (those requiring SNOMED CT or CPT licences) are documented in a restriction notes file. Every mapping carries provenance, and the CI licence linter must pass.",
+  "acceptanceCriteria": [
+    "Mapping pack covers all CDE fields with OMOP Standardized Vocabulary concept mappings, using only open-licensed OMOP member vocabularies.",
+    "SNOMED CT-licenced and CPT-licenced OMOP vocabularies are explicitly excluded; the exclusion is documented in a restriction notes file with the licence reason.",
+    "Every mapping carries provenance: OMOP vocabulary name, version, concept ID, retrieval date, licence/status per `sources/allowlist.yml`.",
+    "All open OMOP vocabularies used have status: approved in `sources/allowlist.yml` signed off by the licence reviewer.",
+    "CI licence deny-list linter passes; `pnpm build && pnpm test && pnpm lint` green.",
+    "Licence reviewer sign-off recorded."
+  ],
+  "resources": [
+    "PLAN.md",
+    "tasks/rare-cancer-registry-templates-vocab-001.json",
+    "tasks/rare-cancer-registry-templates-crosswalk-001.json",
+    "tasks/rare-cancer-registry-templates-license-002.json",
+    "sources/allowlist.yml"
+  ],
+  "output": "A `vocab/omop-open-pack/` directory with open-only OMOP vocabulary mappings and restriction notes, committed via PR with licence reviewer sign-off.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}
